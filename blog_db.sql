@@ -21,7 +21,9 @@ select * from posts
 select * from users
 select * from likes
 
+/* UPDATE SECTION */
 
+update posts set creator_id = 2 where id = 5
 
 /* Trae todos los posts, con la información de los usuarios que les dieron like. */
 
@@ -30,7 +32,7 @@ select  users.first_name, likes.post_id, posts.title  from posts join users on p
 
 /*Trae todos los posts y la información del usuario del campo creator_id */
 
-select  users.first_name, posts.title, posts.text from users join posts on posts.id = users.id join likes on likes.id=users.id
+select users.first_name , posts.title, posts.text from users join posts on posts.id = users.id 
 
 
 
